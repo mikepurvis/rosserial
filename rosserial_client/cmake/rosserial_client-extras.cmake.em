@@ -9,7 +9,7 @@ set(ROSSERIAL_CLIENT_MAKE_LIBRARIES_SCRIPT "${rosserial_client_DIR}/../../../@(C
 function(rosserial_client_make_libraries_generic)
   add_custom_command(
     OUTPUT ${PROJECT_BINARY_DIR}/ros_lib
-    COMMAND ${ROSSERIAL_CLIENT_MAKE_LIBRARIES_SCRIPT} ${PROJECT_BINARY_DIR}
+    COMMAND ${CATKIN_ENV} ${ROSSERIAL_CLIENT_MAKE_LIBRARIES_SCRIPT} ${PROJECT_BINARY_DIR}
   )
   add_custom_target(${PROJECT_NAME}_ros_lib DEPENDS ${PROJECT_BINARY_DIR}/ros_lib)
   add_dependencies(${PROJECT_NAME}_ros_lib rosserial_msgs_genpy std_msgs_genpy)
