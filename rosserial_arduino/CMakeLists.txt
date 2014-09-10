@@ -22,6 +22,10 @@ install(DIRECTORY src/ros_lib
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/src
 )
 
+install(DIRECTORY arduino-cmake
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
 install(PROGRAMS src/rosserial_arduino/make_libraries.py
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
