@@ -13,7 +13,10 @@ add_service_files(FILES
 
 generate_messages()
 
-catkin_package(CATKIN_DEPENDS message_runtime)
+catkin_package(
+  CATKIN_DEPENDS message_runtime
+  CFG_EXTRAS rosserial_arduino-extras.cmake
+)
 
 install(DIRECTORY src/ros_lib
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/src
